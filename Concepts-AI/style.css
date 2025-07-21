@@ -1,0 +1,98 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 2rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00f2fe88;
+  animation: slideIn 1s ease-in-out;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00f2fe;
+}
+
+input {
+  padding: 12px 20px;
+  width: 60%;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #00f2fe;
+  color: #000;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00f2fe;
+}
+
+#outputArea {
+  margin-top: 2rem;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 15px;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.scroll-area {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.preview {
+  width: 100%;
+  height: 300px;
+  background: #fff;
+  border-radius: 10px;
+  border: 2px solid #00f2fe;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #00f2fe;
+  }
+  to {
+    box-shadow: 0 0 20px #00f2fe, 0 0 30px #00c3ff;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
