@@ -12,7 +12,7 @@ async function generateConcept() {
   previewEl.srcdoc = "";
 
   try {
-    const res = await fetch("http://localhost:3000/api/generate", {
+    const res = await fetch("https://ai-concept-visualizer-zeta.vercel.app/api/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ topic })
@@ -72,7 +72,7 @@ async function generateConcept() {
       previewEl.setAttribute("data-code", fullStyledHTML);
 
       // 💾 Save the concept
-      await fetch("http://localhost:3000/api/save", {
+      await fetch("https://ai-concept-visualizer-zeta.vercel.app/api/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
