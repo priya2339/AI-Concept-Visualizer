@@ -16,6 +16,10 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.error("❌ MongoDB connection error:", err));
 
 
+  app.get("/", (req, res) => {
+  res.status(200).send('Hello from the server.');
+});
+
 mongoose.connection.once("open", () => {
   console.log("✅ Connected to MongoDB");
 });
